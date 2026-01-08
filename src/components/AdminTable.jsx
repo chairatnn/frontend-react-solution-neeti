@@ -71,7 +71,7 @@ export function AdminTable({ users, setUsers, fetchUsers, API }) {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full max-w-3xl bg-white border rounded-2xl p-5">
       <form onSubmit={handleSubmit} className="pb-3">
         <input
           onChange={handleChange}
