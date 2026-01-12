@@ -79,8 +79,8 @@ export default function Home() {
         </button>
       </section>
       <section className="w-full flex justify-center">
-        <div className="w-full max-w-xl bg-gradient-to-r from-indigo-400 to-indigo-200 border rounded-2xl p-5">
-          <div className="font-bold text-lg">✨ Ask AI about users ✨</div>
+        <div className="w-full max-w-xl bg-gradient-to-r from-indigo-500 to-indigo-300 border rounded-2xl p-5">
+          <div className="font-bold text-lg text-amber-300">Ask AI about users 🧠 ✨</div>
           {authLoading ? (
             <div className="text-sm mt-2">Checking login...</div>
           ) : user ? (
@@ -111,13 +111,13 @@ export default function Home() {
           ) : null}
           {askResult ? (
             <div className="mt-3 text-sm">
-              <div className="font-bold">Answer</div>
-              <div className="mt-1 whitespace-pre-wrap">
+              <div className="font-bold text-white">Answer</div>
+              <div className="mt-1 whitespace-pre-wrap text-white">
                 {askResult.answer || "(no answer)"}
               </div>
-              <div className="font-bold mt-3">Sources</div>
+              <div className="font-bold mt-3 text-white">Sources</div>
               {Array.isArray(askResult.sources) && askResult.sources.length ? (
-                <ul className="list-disc pl-6 mt-1">
+                <ul className="list-disc pl-6 mt-1 text-white">
                   {askResult.sources.map((s) => (
                     <li key={s._id}>
                       {s.username} ({s.role}) - {s.email}
